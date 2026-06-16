@@ -237,7 +237,7 @@ onMounted(() => {
 
 <template>
   <div class="app-container">
-    <h1 class="main-title">Personal Finance Tracker v2</h1>
+    <h1 class="main-title">Personal Finance Tracker</h1>
 
     <div class="section-card configuration">
       <div class="input-inline">
@@ -344,13 +344,13 @@ onMounted(() => {
           <span>Actual Spent: <strong :class="item.type">${{ getActualTxTotal(item) }}</strong></span>
           
           <span v-if="getActualTxTotal(item) > item.allocatedBudget" class="badge-status over-spending">
-            Over Plan by +${{ getActualTxTotal(item) - item.allocatedBudget }} (លើសផែនការ)
+            Over Plan by +${{ getActualTxTotal(item) - item.allocatedBudget }} 
           </span>
           <span v-else-if="getActualTxTotal(item) < item.allocatedBudget" class="badge-status safe-spending">
-            Remaining: ${{- (getActualTxTotal(item) - item.allocatedBudget) }} (នៅសល់ពីផែនការ)
+            Remaining: ${{- (getActualTxTotal(item) - item.allocatedBudget) }} 
           </span>
           <span v-else class="badge-status exact-spending">
-            On Target (ស្មើផែនការគម្រោង)
+            On Target 
           </span>
         </div>
 
